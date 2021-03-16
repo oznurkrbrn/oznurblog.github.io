@@ -2,14 +2,14 @@
 body {
   font-family: "Lato", sans-serif;
   transition: background-color .5s;
-  
+  background-image: url(tane.jpg);
   width: 100%;
   background-repeat: no-repeat;
   background-size:0%;
   
 }
 html { 
-   background: url(tane.jpg) no-repeat center center fixed; 
+
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
