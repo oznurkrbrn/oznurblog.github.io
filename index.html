@@ -8,17 +8,27 @@
   <link href="stil_dosyasi.css" type="text/css" rel="stylesheet"/>
   
   <title>Blog | Öznur</title>
+  <style>
+    
+    
+    
+    
+    
+    </style>
 <style>
-  @media screen and  (max-width: 700px) and (min-width: 300px), (min-width: 1100px)  {
-    .sidenav {
+ 
+  @media screen and  (max-width: 700px) and (min-width: 300px),(max-width:1100px) {
+    .overlay{
       padding-top: 15px;
       height: 100%;
-      width:0;
+      width:100%;
       background-color:black;
       overflow-x: hidden;
+     
       }
     
-    .sidenav a {font-size: 18px;}
+    .overlay a {font-size: 18px;padding-top:0px;padding-left:8px; font-size:36px;}
+    
     div.col-6{
       width: 500px;
       height: 500px;
@@ -30,15 +40,16 @@
       min-width: auto;
       
     }
-    div.benitani{
+    .benitani{
       margin-top:-80%;
+      margin-left:10%;
       position: relative;
 
       
     }
     div.benitani2{
       margin-top:-20%;
-      margin-left:15%;
+      margin-left:10%;
       position: relative;
       border-style: solid;
       border-color:white;
@@ -48,7 +59,15 @@
     margin:0px;
     padding:0px;
     }
-    
+    .foto{
+      margin-top:20%;
+      margin-left:10%;
+      margin-bottom: -30%;
+    }
+    .yazi{
+      margin-top:50%;
+      margin-left:-50%;
+    }
  
    
   
@@ -59,23 +78,21 @@
 
 </head>
 <body>
-    <span id="menu" style="font-size:30px;cursor:pointer;float:left;" onclick="openNav()">&#9776; MENU</span>
-<div id="mySidenav" class="sidenav" >
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="foto" > 
-     <img class="pic" src="öznurr.jpeg"/>
-  </div>
-  <p class="yazi" style="color: #f1f1f1;">Öznur Karaburunn</p>
-  <p class="yazi" style="color: #f1f1f1;font-size: 10px;font-style: italic;">Junior Software Engineer</p>
- 
-  <li><a href="#class1"><i class="fa fa-home"></i>HAKKIMDA</a></li>
-  <li><a href="#class2"><i class="fa fa-comment"></i>HEDEFLERİM</a></li>
-  <li><a href="#class3"><i class="fa fa-tasks"></i>BECERİLERİM</a></li>
-  <li><a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i>İLETİŞİM</a></li>
-  
-  
-</div>
 
+
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+    <div class="overlay-content" style="margin-top:10%;">
+      <a href="#"><i class="fa fa-home"></i>About</a>
+      <a href="#"><i class="fa fa-comment"></i>Services</a>
+      <a href="#"><i class="fa fa-tasks"></i>Clients</a>
+      <a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i>Contact</a>
+    </div>
+  </div>
+  
+  
+  <span style="font-size:50px;cursor:pointer;float:left;" class="menu"onclick="openNav()">&#9776; MENU</span>
 <div id="main">
   <div class="main-1">
    <div class="col-6">
@@ -84,7 +101,7 @@
       
    </div> 
     <div class="benitani" style=" float:right;position:relative;">
-      <h1 style="color:azure;">HAKKIMDA</h1>
+      <h1 style="color:azure;font-size: 36px;">HAKKIMDA</h1>
       <h5  style="color:azure;">Beni Tanıyın,Ben Kimim?</h5>
       <hr style="size: 25%;width: 25%; margin-left:38%; background-color: blueviolet" noshade="none">
       
@@ -120,24 +137,26 @@
 
 </div>
 
-
 <script>
+  function openNav() {
+    document.getElementById("myNav").style.display = "block";
+  }
   
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  document.getElementById("menu").style.display="none";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.getElementById("menu").style.display="block";
-}
-
-
-</script>
+  function closeNav() {
+    document.getElementById("myNav").style.display = "none";
+  }
+  </script>
 
    
 </body>
 </html> 
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+   
+    
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+

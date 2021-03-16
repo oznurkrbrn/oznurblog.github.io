@@ -16,46 +16,47 @@ html {
    -o-background-size: cover;
     background-size: cover;
     }
-.sidenav {
-  height: 100%;
-  width:0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color:black;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 50px;
- 
-  
-  
-}
+    .overlay {
+      height: 100%;
+      width: 50%;
+      display: none;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0, 0.9);
+    }
+    
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+      font-size:18px;
+    }
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    
+    .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+    }
+    
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: flex;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color:white;
-  border-bottom: ivory;
-  
-  
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-  display:block;
-}
 
 #main {
  
