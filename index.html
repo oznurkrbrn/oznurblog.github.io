@@ -1,162 +1,126 @@
+
 <!DOCTYPE html>
-<html >
+<html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-  <link href="stil_dosyasi.css" type="text/css" rel="stylesheet"/>
   
   <title>Blog | Öznur</title>
-  <style>
-    
-    
-    
-    
-    
-    </style>
 <style>
- 
-  @media screen and  (max-width: 700px) and (min-width: 300px),(max-width:1100px) {
-    .overlay{
-      padding-top: 15px;
-      height: 100%;
-      width:65%;
-      background-color:black;
-      overflow-x: hidden;
-     
-      }
-    
-    .overlay a {font-size: 18px;padding-top:0px;padding-left:8px; font-size:36px;}
-    
-    div.col-6{
-      width: 500px;
-      height: 500px;
-      margin-left:25%;
-    }
-    body{ 
-      overflow-x: hidden;
-      max-width: auto;
-      min-width: auto;
-      
-    }
-    .benitani{
-      margin-top:-50%;
-      left:-28%;
-      position: relative;
+html {
+  font-family: 'Lato', sans-serif;
+  background-image: url(astronot.jpg);
+  background-repeat: none;
+  background-size: 100%;
+  background-position:fixed;
+}
 
-      
+.overlay {
+  height: 100%;
+  width: 25%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width:100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+
+@media screen and  (max-width: 700px) and (min-width: 300px), (max-height: 450px)  {
+html{
+        
+    background: url(astronott.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
     }
-    div.benitani2{
-      margin-top:-20%;
-      margin-left:-5%;
-      position: relative;
-      border-style: solid;
-      border-color:white;
-    }
-    html{
-    position: fixed;
-    margin:0px;
-    padding:0px;
-    }
-    .foto{
-      margin-top:20%;
-      margin-left:-30%;
-      margin-bottom: -30%;
-    }
-    .yazi{
-      margin-top:50%;
-      margin-left:-50%;
-    }
- 
-   
-  
-   
+    .overlay{width: 100%;}
+  .overlay a {font-size: 40px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
   }
-
+  #hrclass{
+    size: 25%;width: 25%; margin-left:38%; background-color:mediumpurple" noshade="none"
+  }
+  .imgclass{width: 350px;height: 400px;border-radius: 20px;position:relative;left:1%;}
+  .h2class{}
+}
 </style>
-
 </head>
 <body>
 
-
-  <div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    
-    <div class="overlay-content" style="margin-top:10%;">
-      <a href="#"><i class="fa fa-home"></i>About</a>
-      <a href="#"><i class="fa fa-comment"></i>Services</a>
-      <a href="#"><i class="fa fa-tasks"></i>Clients</a>
-      <a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i>Contact</a>
-    </div>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <img class="pic" src="öznurr.jpeg" style="border-radius: 50%; width: 120px;height: 120px; margin-top:-50px;"/>
+    <p style="color:white">ÖZNUR KARABURUN</p>
+    <p style="color:white">Junior Software Engineer</p>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
   </div>
-  
-  
-  <span style="font-size:50px;cursor:pointer;float:left;" class="menu"onclick="openNav()">&#9776; MENU</span>
-<div id="main">
-  <div class="main-1">
-   <div class="col-6">
-    <img class="photo1" src="oznurkaraburun.jpeg" style="width: 30%;height: 30%;position: relative;top:0px;margin-top: 20%;  border: 2px solid white;
-    border-radius: 15px;">
-      
-   </div> 
-    <div class="benitani" style=" float:right;position:relative;">
-      <h1 style="color:azure;font-size: 36px;">HAKKIMDA</h1>
-      <h5  style="color:azure;">Beni Tanıyın,Ben Kimim?</h5>
-      <hr style="size: 25%;width: 25%; margin-left:38%; background-color: blueviolet" noshade="none">
-      
-    </div>
-    <div class="benitani2" style="width: 100%; box-shadow: 5px 10px 18px white;">
-       <p class="benitani2p" style="color:azure;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Merhaba,
-        Öznur ben.1997 yılında doğdum.
-        Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği mezunuyum.
-        Aktif olarak 2 senedir yazılım dünyasındayım.Yeni teknolojiler
-        öğrenmeyi,geliştirmeyi seviyorum.
-      </p>
-   </div>
-  </div>
-  <div>
-    <h1 >BECERİLERİM</h1>
-    <div class="polaroid rotate_right">
-      <img src="machine.PNG" alt="Pulpit rock" width="260" height="195">
-      <p class="caption">Makine öğrenmesi,Python</p>
-    </div>
-    
-    <div class="polaroid rotate_left">
-      <img src="machine.PNG" alt="Monterosso al Mare" width="284" height="213">
-      <p class="caption">HTML,CSS,JS,ANGULAR JS</p>
-    </div>
-   
-  </div>
-  
-        
-    
-       
-        
-     
-
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+<div>
+    <h1  style="color:white;margin-left:100px;">Hakkımda</h1>
+    <hr id="hrclass">
+    <img src="oznurkaraburun.jpeg" class="imgclass">
+</div>
+<div>
+    <h2 class="h2class">Beni Tanıyın..</h2>
+    <p>Merhaba,ben Öznur Karaburun.1997 İstanbul doğumluyum.Lise hayatımdan beri teknoloji ile iç içeyim.
+        Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği mezunuyum.Yeni teknolojileri denemeyi,deneyimlemeyi,öğrenmeyi seviyorum.
+    </p>
 </div>
 
 <script>
-  function openNav() {
-    document.getElementById("myNav").style.display = "block";
-  }
-  
-  function closeNav() {
-    document.getElementById("myNav").style.display = "none";
-  }
-  </script>
+function openNav() {
+  document.getElementById("myNav").style.display = "block";
+}
 
-   
+function closeNav() {
+  document.getElementById("myNav").style.display = "none";
+}
+</script>
+     
 </body>
-</html> 
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-   
-    
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
+</html>
 
