@@ -76,14 +76,20 @@ html{
   top: 15px;
   right: 35px;
   }
-  #hrclass{
+  .hrclass{
     size: 25%;width: 25%; margin-left:38%; background-color:mediumpurple" noshade="none"
   }
   .imgclass{width: 350px;height: 400px;border-radius: 20px;position:relative;left:1%;}
-  .h1class{color:white;margin-left:100px;}
-  .h2class{margin-left:30%;}
-  .p1class{font-style:unset;color:black;font-weight: bolder;border-style:dashed;}
+  .h1class{color:white;margin-left:30%;}
+  .h2class{ color:white;}
+  .p1class{color:white;}
   .p1class:hover{background-color: rgba(255,255,255,0.3);font-weight: bolder;outline-style: groove;}
+  .hrclass2{padding:10%;}
+  .h1class2{color:white;margin-left:25%;}
+  #faclass1{font-size:100px}
+  .responsive{background-color: rgba(255,255,255,0.3);}
+  .responsive:hover{background-color: white;font-style:unset;}
+  
 }
 </style>
 </head>
@@ -104,7 +110,7 @@ html{
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
 <div>
     <h1 class="h1class">Hakkımda</h1>
-    <hr id="hrclass">
+    <hr class="hrclass">
     <img src="oznurkaraburun.jpeg" class="imgclass">
 </div>
 
@@ -114,6 +120,13 @@ html{
         Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği mezunuyum.Yeni teknolojileri denemeyi,deneyimlemeyi,öğrenmeyi seviyorum.
     </p>
 </div>
+<hr id="hrclass2">
+ <h1 class="h1class2">Becerilerim</h1>
+ <center><p style="color:white;">HTML,CSS,Javascript,AngularJs,Asp .Net,Python,Makine Öğrenmesi,Görüntü işleme,SharePoint</p></center>
+ <div class="responsive">
+  <i id="faclass1" class="fa fa-spinner"></i>
+  <p>Responsive web site geliştirmede kendimi geliştirmeye devam etmekteyim.Böylelikle web sitelerini uyumlu yapmayı öğreniyorum.</p>
+ </div>
 
 <script>
 function openNav() {
