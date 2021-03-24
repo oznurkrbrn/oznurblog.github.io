@@ -169,13 +169,107 @@ top: -3px;
 .content-box:hover p{
   color:black;
 }
-
-
-  
-
-
+.imgsrc{
+  overflow-x: hidden;
   
 }
+#fa-stack{
+  color:black;
+  
+}
+#fa-stacklin{
+  color:black;
+  margin-left:50%;
+}
+.button {
+	
+	--offset: 10px;
+	--border-size: 2px;
+	margin-top:5%;
+  margin-left:12%;
+	display: block;
+	position: relative;
+	padding: 1.5em 3em;
+	appearance: none;
+	border: 0;
+	background: transparent;
+	color:purple;
+	text-transform: uppercase;
+	letter-spacing: .25em;
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 0;
+	box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+	transition: background .8s ease;
+}
+	
+	button:hover {
+		background: rgba(100, 0, 0, .03);
+	}
+	
+	.button__horizontal,
+	.button__vertical {
+		position: absolute;
+		top: var(--horizontal-offset, 0);
+		right: var(--vertical-offset, 0);
+		bottom: var(--horizontal-offset, 0);
+		left: var(--vertical-offset, 0);
+		transition: transform .8s ease;
+		will-change: transform;
+  }
+		
+		button::before {
+			content: '';
+			position: absolute;
+			border: inherit;
+		}
+	
+	
+	.button__horizontal {
+		--vertical-offset: calc(var(--offset) * -1);
+		border-top: var(--border-size) solid currentcolor;
+		border-bottom: var(--border-size) solid currentcolor;
+  }
+		
+		button::before {
+			top: calc(var(--vertical-offset) - var(--border-size));
+			bottom: calc(var(--vertical-offset) - var(--border-size));
+			left: calc(var(--vertical-offset) * -1);
+			right: calc(var(--vertical-offset) * -1);
+		}
+	
+	
+	button:hover .button__horizontal {
+		transform: scaleX(0);
+	}
+	
+	.button__vertical {
+		--horizontal-offset: calc(var(--offset) * -1);
+		border-left: var(--border-size) solid currentcolor;
+		border-right: var(--border-size) solid currentcolor;
+  }
+		
+		button::before {
+			top: calc(var(--horizontal-offset) * -1);
+			bottom: calc(var(--horizontal-offset) * -1);
+			left: calc(var(--horizontal-offset) - var(--border-size));
+			right: calc(var(--horizontal-offset) - var(--border-size));
+		}
+	
+	
+	button:hover .button__vertical {
+		transform: scaleY(0);
+	}
+	
+}
+
+
+  
+
+
+  
+
 </style>
 </head>
 <body>
@@ -186,10 +280,12 @@ top: -3px;
     <img class="pic" src="öznurr.jpeg" style="border-radius: 50%; width: 120px;height: 120px; margin-top:-50px;"/>
     <p style="color:white">ÖZNUR KARABURUN</p>
     <p style="color:white">Junior Software Engineer</p>
-    <a href="#h1class"><i class="fa fa home"></i>Hakkımda</a>
-    <a href="#h1class2">Becerilerim</a>
-    <a href="#h1class3">Hedeflerim</a>
-    <a href="#">İletişim</a>
+    <a class="list-group-item" href="#h1class"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Hakkımda</a>
+    <a class="list-group-item" href="#h1class2"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; Becerilerim</a>
+    <a class="list-group-item" href="#h1class3"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp; Hedeflerim</a>
+    <a class="list-group-item" href="#h1class4"><i class="fa fa-telephone fa-fw" aria-hidden="true"></i>&nbsp; İletişim</a>
+    
+    
   </div>
 </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">➤ MENU</span>
@@ -241,7 +337,7 @@ top: -3px;
    öğretmek..
  </p>
  </div>
- <div>
+ <div class="imgsrc">
    <img src="hedef.PNG">
  </div>
 </div>
@@ -250,18 +346,27 @@ top: -3px;
   <h1 class="h1class4" id="h1class4">İletişim</h1>
   <div class="content-box">
   <h2>Aşsağıdaki bilgiler üzerinden bana ulaşabilirsiniz✔</h2>
-  <a href="#"><span class="fa-stack fa-lg">
+  <a href="#" id="fa-stack"><span class="fa-stack fa-lg" id="fa-stack">
     <i class="fa fa-square-o fa-stack-2x"></i>
     <i class="fa fa-envelope fa-stack-1x"></i>
   </span>oznurr03@hotmail.com</a>
-  <a href="#"><span class="fa-stack fa-lg">
+  <a href="#"><span class="fa-stack fa-lg" id="fa-stack">
     <i class="fa fa-square-o fa-stack-2x"></i>
     <i class="fa fa-instagram fa-stack-1x"></i>
-  </span></a><br>
-  <a href="#"><span class="fa-stack fa-lg">
+  </span></a>
+  <a href="#"><span class="fa-stack fa-lg" id="fa-stacklin">
     <i class="fa fa-square-o fa-stack-2x"></i>
     <i class="fa fa-linkedin fa-stack-1x"></i>
   </span></a>
+  <a href="cv_oznurkaraburun.pdf" download>
+  <button class="button">
+    CV İNDİR
+    <div class="button__horizontal"></div>
+    <div class="button__vertical"></div>
+    
+  </button>
+</a>
+  
   </div>
   
 </div>
